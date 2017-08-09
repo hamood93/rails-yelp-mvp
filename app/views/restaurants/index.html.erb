@@ -1,5 +1,7 @@
-<h1>Restaurants - List :</h1>
-<% @restaurants.each do |restaurant| %>
-  <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
-<% end %>
-<%= link_to "Add new Restaurant", new_restaurant_path %>
+<center>
+  <h1>Restaurants - List :</h1>
+  <% @restaurants.each do |restaurant| %>
+    <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+  <% end %>
+  <%= link_to "Add new Restaurant", new_restaurant_path, class: "btn btn-danger" %>
+</center>

@@ -1,18 +1,20 @@
-<h2>Restaurant: <%= @restaurant.name %></h2>
-<p>
-  It's on <%= @restaurant.address %>, the phone number is <%= @restaurant.phone_number %> and they serve <%= @restaurant.category %> food!
-</p>
+<center>
+  <h2>Restaurant: <%= @restaurant.name %></h2>
+  <p>
+    It's on <%= @restaurant.address %>, the phone number is <%= @restaurant.phone_number %> and they serve <%= @restaurant.category %> food!
+  </p>
 
-<% if @restaurant.reviews != nil%>
-  <h2>Reviews</h2>
-  <% @restaurant.reviews.each do |review| %>
-    <p> content: <%= review.content %></p>
-    <p> rating: <%= review.rating %></p>
+  <% if @restaurant.reviews != nil%>
+    <h2>Reviews</h2>
+    <% @restaurant.reviews.each do |review| %>
+      <p> content: <%= review.content %></p>
+      <p> rating: <%= review.rating %></p>
+    <% end %>
   <% end %>
-<% end %>
-<%= link_to "show restaurants", restaurants_path %>
-<%= link_to "add review", new_restaurant_review_path(@restaurant) %>
+  <%= link_to "show restaurants", restaurants_path, class: "btn btn-info" %>
+  <%= link_to "add review", new_restaurant_review_path(@restaurant), class: "btn btn-success" %>
 
-<%= link_to "Delete", admin_restaurant_path(@restaurant),
+  <%= link_to "Delete", admin_restaurant_path(@restaurant),
       method: :delete,
-      data: { confirm: "Are you sure?"} %>
+      data: { confirm: "Are you sure?"}, class: "btn btn-warning" %>
+</center>

@@ -1,7 +1,9 @@
-<%= simple_form_for [:admin,@restaurant] do |f| %>
-  Name: <%= f.input :name %>
-  Address: <%= f.input :address %>
-  Phone Number: <%= f.input :phone_number %>
-  Category: <%= f.input :category %>
-  <%= f.submit "edit restaurant", class: "btn btn-danger" %>
-<% end %>
+<center>
+  <%= simple_form_for [:admin,@restaurant] do |f| %>
+    Name: <%= f.input :name %>
+    Address: <%= f.input :address %>
+    Phone Number: <%= f.input :phone_number %>
+    Category: <%= f.input :category %>
+    <%= f.submit "edit restaurant", class: "btn btn-info" %>
+  <% end %>
+</center>

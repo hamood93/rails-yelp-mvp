@@ -11,7 +11,7 @@ class Admin::RestaurantsController < ApplicationController
 
   def destroy
     @restaurant = Restaurant.find(params[:id])
-    byebug
+    # byebug
     @restaurant.destroy
 
     redirect_to restaurants_path
